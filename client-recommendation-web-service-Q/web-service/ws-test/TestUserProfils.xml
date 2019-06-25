@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="90dd3a4d-4470-41eb-b5df-0ef34a05b4cf" activeEnvironment="Default" name="UserProfile" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f89f903d-8f5f-48ce-97a0-fc76fd6e0076" wsaVersion="NONE" name="BasicHttpBinding_IUserProfil" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IUserProfil" soapVersion="1_1" anonymous="optional" definition="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?wsdl"><con:part><con:url>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserProfil_addToFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridge"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_addToFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridgeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeFromFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridge"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeFromFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridgeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquirePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferences"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquirePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferencesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferences"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferencesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquireAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergies"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquireAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergiesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergies"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergiesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_emptyFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:emptyFridge"/>
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_emptyFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:emptyFridgeResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IUserProfil">
+    <wsdl:operation name="addToFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/addToFridge" message="tns:IUserProfil_addToFridge_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/addToFridgeResponse" message="tns:IUserProfil_addToFridge_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removeFromFridge" message="tns:IUserProfil_removeFromFridge_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removeFromFridgeResponse" message="tns:IUserProfil_removeFromFridge_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/inquirePreferences" message="tns:IUserProfil_inquirePreferences_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/inquirePreferencesResponse" message="tns:IUserProfil_inquirePreferences_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removePreferences" message="tns:IUserProfil_removePreferences_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removePreferencesResponse" message="tns:IUserProfil_removePreferences_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/inquireAllergies" message="tns:IUserProfil_inquireAllergies_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/inquireAllergiesResponse" message="tns:IUserProfil_inquireAllergies_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removeAllergies" message="tns:IUserProfil_removeAllergies_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removeAllergiesResponse" message="tns:IUserProfil_removeAllergies_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="emptyFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/emptyFridge" message="tns:IUserProfil_emptyFridge_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/emptyFridgeResponse" message="tns:IUserProfil_emptyFridge_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserProfil" type="tns:IUserProfil">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addToFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/addToFridge" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removeFromFridge" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/inquirePreferences" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removePreferences" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/inquireAllergies" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removeAllergies" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emptyFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/emptyFridge" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IUserProfil" binding="tns:BasicHttpBinding_IUserProfil">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="addToFridge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q1:ArrayOfstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addToFridgeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addToFridgeResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeFromFridge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q2:ArrayOfstring" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeFromFridgeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removeFromFridgeResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inquirePreferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q3:ArrayOfstring" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inquirePreferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inquirePreferencesResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removePreferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q4:ArrayOfstring" xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removePreferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removePreferencesResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inquireAllergies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q5:ArrayOfstring" xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inquireAllergiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inquireAllergiesResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeAllergies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q6:ArrayOfstring" xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeAllergiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removeAllergiesResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emptyFridge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="args" nillable="true" type="q7:ArrayOfstring" xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emptyFridgeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emptyFridgeResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint></con:endpoints><con:operation id="b12d45ed-e1d9-43df-b9ea-589fd58adfa8" isOneWay="false" action="http://tempuri.org/IUserProfil/addToFridge" name="addToFridge" bindingOperationName="addToFridge" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da6a6e35-1f86-4935-94fe-3dcc29f4c7b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:addToFridge>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:addToFridge>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/addToFridge"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2cef93cc-c424-45e2-9d48-291f8977fa37" isOneWay="false" action="http://tempuri.org/IUserProfil/emptyFridge" name="emptyFridge" bindingOperationName="emptyFridge" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd861d23-cc99-43f4-b962-dac350ffd3b4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:emptyFridge>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:emptyFridge>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/emptyFridge"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8586648f-ee04-4fa2-a086-6961daad2902" isOneWay="false" action="http://tempuri.org/IUserProfil/inquireAllergies" name="inquireAllergies" bindingOperationName="inquireAllergies" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a1e9f6c9-dfe2-42b6-846f-018901aeb31a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:inquireAllergies>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:inquireAllergies>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/inquireAllergies"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3f369711-5994-4628-970c-8eb2cecc2e3e" isOneWay="false" action="http://tempuri.org/IUserProfil/inquirePreferences" name="inquirePreferences" bindingOperationName="inquirePreferences" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1353c0cc-1efc-4235-aaa0-29a4c1bcfc58" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:inquirePreferences>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:inquirePreferences>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/inquirePreferences"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e332b60a-2bef-492f-a08e-ce57f5195fc7" isOneWay="false" action="http://tempuri.org/IUserProfil/removeAllergies" name="removeAllergies" bindingOperationName="removeAllergies" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3a4f3e92-cabf-4160-8b04-9719addd184b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:removeAllergies>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:removeAllergies>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/removeAllergies"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bc995e89-1a77-4484-b1e7-bd0591b296d3" isOneWay="false" action="http://tempuri.org/IUserProfil/removeFromFridge" name="removeFromFridge" bindingOperationName="removeFromFridge" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1c2d5854-bfe8-4227-b231-5753cb5b680c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:removeFromFridge>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:removeFromFridge>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/removeFromFridge"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c6c002b2-6057-4deb-9b7e-81cd90677860" isOneWay="false" action="http://tempuri.org/IUserProfil/removePreferences" name="removePreferences" bindingOperationName="removePreferences" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0dd17263-8b35-4fa6-83ab-44faa3ce6c89" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:removePreferences>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>?</arr:string>\r
+         </tem:args>\r
+      </tem:removePreferences>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserProfil/removePreferences"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="e573fc7d-0dfa-4b50-99f4-8dda7eeea7d4" name="TestFridge"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="693ee5e9-a5d0-489b-b45e-73349be66186" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase Fridge" searchProperties="true"><con:settings/><con:testStep type="request" id="540d023a-bb97-453d-a56a-89b1fe4cd74f" name="emptyFridge"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>emptyFridge</con:operation><con:request name="emptyFridge" id="ba584252-fe7f-4f4e-91a7-78ae9ecae8ae"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:emptyFridge>\r
+         <!--Optional:-->\r
+         <tem:args>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:string>675719</arr:string>\r
+         </tem:args>\r
+      </tem:emptyFridge>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="3a99c615-ba3e-402d-a59b-e7ce601f3e84" name="Contains"><con:configuration><token>{"fridge":[],"status":"user's fridge has 0 ingredients in his gridge\n"}</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="37044ec8-1242-486a-86ea-d72ca64eb590" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="SOAP Response" id="5727c15b-e364-4601-843a-6a7849514f80" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/IUserProfil/emptyFridge" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addIngredients" id="83db92b0-d20f-4174-a549-1d9478c24c69"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>addToFridge</con:operation><con:request name="addIngredients" id="9a836987-ebb2-4fab-a6ef-5a9c6c2f2faf"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:addToFridge>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>milk</arr:string>
+            <arr:string>apple</arr:string>
+            <arr:string>inconnu</arr:string>
+         </tem:args>
+      </tem:addToFridge>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f9fa3cda-69cc-4419-87ae-28202243e7eb"/><con:assertion type="Schema Compliance" id="eb1595cf-d431-470a-885a-092409813541"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsUnknown"><con:configuration><token>"Unknown":["inconnu"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsAdded"><con:configuration><token>"added":["milk","apple"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsAlreadyInFridge"><con:configuration><token>"already in fridge":[]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsFridge"><con:configuration><token>"fridge":["milk","apple"],</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsStatus"><con:configuration><token>"status":"Ingredient [</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addIngredients2" id="c4f85e0c-3ead-4265-b25f-cc6e89dd71a8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>addToFridge</con:operation><con:request name="addIngredients2" id="9a836987-ebb2-4fab-a6ef-5a9c6c2f2faf"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:addToFridge>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>milk</arr:string>
+            <arr:string>coconut</arr:string>
+            <arr:string>phone</arr:string>
+         </tem:args>
+      </tem:addToFridge>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f9fa3cda-69cc-4419-87ae-28202243e7eb"/><con:assertion type="Schema Compliance" id="eb1595cf-d431-470a-885a-092409813541"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsUnknown"><con:configuration><token>"Unknown":["phone"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsAdded"><con:configuration><token>"added":["coconut"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsAlreadyInFridge"><con:configuration><token>"already in fridge":["milk"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsFridge"><con:configuration><token>"fridge":["milk","apple","coconut"],</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d6d6f22e-afe2-4852-a257-4dd0c2853c8b" name="ContainsStatus"><con:configuration><token>"status":"Ingredient [</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="removeIngredients" id="e9f9b557-f2a1-4818-b31c-3bfbb68be4cf"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>removeFromFridge</con:operation><con:request name="removeIngredients" id="a275d80e-2a86-41c3-b7f1-50f57707959f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:removeFromFridge>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>banana</arr:string>
+            <arr:string>chair</arr:string>
+            <arr:string>coconut</arr:string>
+         </tem:args>
+      </tem:removeFromFridge>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="44091641-9a10-414f-b39d-051787d1b56f"/><con:assertion type="Schema Compliance" id="eb8f9c85-a3a0-4c78-ac30-9e3443909166"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="f3118eea-f88e-4707-84fb-551f77cd32cc" name="ContainsUnknown"><con:configuration><token>"Unknown":["chair"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f3118eea-f88e-4707-84fb-551f77cd32cc" name="ContainsWasNotInFridge"><con:configuration><token>"Was not in fridge":["banana"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f3118eea-f88e-4707-84fb-551f77cd32cc" name="ContainsFridge"><con:configuration><token>"fridge":["milk","apple"],</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f3118eea-f88e-4707-84fb-551f77cd32cc" name="ContainsRemoved"><con:configuration><token>"removed":["coconut"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f3118eea-f88e-4707-84fb-551f77cd32cc" name="ContainsStatus"><con:configuration><token>"status":"Ingredient [</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0fd52a66-0e3c-46f7-8552-d43bb1aa15f2" name="TestPreferences"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1e14d16a-50eb-4927-a8af-be04ecc35098" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase Preferences" searchProperties="true"><con:settings/><con:testStep type="request" name="removePreferences" id="2eb57b9a-3ccf-44f5-a096-37bbef2fb30a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>removePreferences</con:operation><con:request name="removePreferences" id="7236855f-703b-4c66-ae6d-709141912a6f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:removePreferences>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>banana</arr:string>
+            <arr:string>egg</arr:string>
+            
+         </tem:args>
+      </tem:removePreferences>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bd2fc234-a595-4c84-b0b6-4f472f8e41f1"/><con:assertion type="Schema Compliance" id="285ae5af-a290-404a-ad2a-4b640fa19eb6"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addPreferences" id="155e6b68-a1bc-43e3-865b-713ed1038131"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>inquirePreferences</con:operation><con:request name="addPreferences" id="dc3981d7-3d3a-45b2-86c4-c5c13bd64fcb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:inquirePreferences>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>laptop</arr:string>
+            
+         </tem:args>
+      </tem:inquirePreferences>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="fe04e4e3-f7d3-4639-b290-520c47b595f4"/><con:assertion type="Schema Compliance" id="49908d47-dd05-4424-a332-9e7eb6b44670"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsUnknown"><con:configuration><token>"Unknown":["laptop"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsAdded"><con:configuration><token>"added":["egg"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsAlreadyInquired"><con:configuration><token>"already inquired":[]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsPreferences"><con:configuration><token>"preferences":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsStatus"><con:configuration><token>"status":"Preferences have been added to the user."</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addPreferences2" id="0bb10930-016f-4a3a-9541-1fcdbfb7489c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>inquirePreferences</con:operation><con:request name="addPreferences2" id="dc3981d7-3d3a-45b2-86c4-c5c13bd64fcb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:inquirePreferences>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>banana</arr:string>
+            <arr:string>laptop</arr:string>
+            
+         </tem:args>
+      </tem:inquirePreferences>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="fe04e4e3-f7d3-4639-b290-520c47b595f4"/><con:assertion type="Schema Compliance" id="49908d47-dd05-4424-a332-9e7eb6b44670"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsUnknown"><con:configuration><token>"Unknown":["laptop"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsAdded"><con:configuration><token>"added":["banana"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsAlreadyInquired"><con:configuration><token>"already inquired":["egg"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsPreferences"><con:configuration><token>"preferences":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ee8b1a80-92fc-4276-aeab-f8041225a427" name="ContainsStatus"><con:configuration><token>"status":"Preferences have been added to the user."</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="removePreferences2" id="bfec68e2-6018-439a-9c37-7304ae915c5d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>removePreferences</con:operation><con:request name="removePreferences2" id="7236855f-703b-4c66-ae6d-709141912a6f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:removePreferences>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>banana</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>dell</arr:string>
+            <arr:string>coconut</arr:string>
+            
+         </tem:args>
+      </tem:removePreferences>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bd2fc234-a595-4c84-b0b6-4f472f8e41f1"/><con:assertion type="Schema Compliance" id="285ae5af-a290-404a-ad2a-4b640fa19eb6"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="577f607b-925c-495d-aced-2d5763269ab9" name="ContainsUnknown"><con:configuration><token>"Unknown":["dell"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="577f607b-925c-495d-aced-2d5763269ab9" name="ContainsWasNotInFridge"><con:configuration><token>"Was not in preferences":["coconut"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="577f607b-925c-495d-aced-2d5763269ab9" name="ContainsPreferences"><con:configuration><token>"preferences":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="577f607b-925c-495d-aced-2d5763269ab9" name="ContainsRemoved"><con:configuration><token>"removed":["banana","egg"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="577f607b-925c-495d-aced-2d5763269ab9" name="ContainsStatus"><con:configuration><token>"status":"Preferences :  ['banana', 'egg', 'dell', 'coconut'] have been removed from the user's preferences"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="a2560e36-bf5f-4ba3-9f03-95a15736f7d6" name="TestAllergies"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0d8ec180-bb23-421b-b968-093a0dc24527" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase Allergies" searchProperties="true"><con:settings/><con:testStep type="request" name="removeAllergies" id="13f66147-c746-42f6-882b-165f8921aa44"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>removeAllergies</con:operation><con:request name="removeAllergies" id="44aa9c6f-6e4b-4ac3-a23a-832dd9cd0da2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:removeAllergies>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>banana</arr:string>
+            
+         </tem:args>
+      </tem:removeAllergies>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d589bf20-6572-41f6-ad89-9c95ef78ee51"/><con:assertion type="Schema Compliance" id="025d9474-a032-4f02-b517-c87e806bdec4"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addAllergies" id="da786c06-a381-4265-82bd-d9f60e3a2d36"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>inquireAllergies</con:operation><con:request name="addAllergies" id="c5dd9398-da6f-445f-838a-4a3328f09f7a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:inquireAllergies>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>computer</arr:string>
+         </tem:args>
+      </tem:inquireAllergies>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2a61f880-3ed0-46d4-80b3-a79e6fe67eff"/><con:assertion type="Schema Compliance" id="a659cefb-0a3e-480c-930d-fd2c9c43bd40"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsUnknown"><con:configuration><token>"Unknown":["computer"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAllergies"><con:configuration><token>"allergies":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAlreadyInquired"><con:configuration><token>"already inquired":[]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsStatus"><con:configuration><token>"status":"Preferences have been added to the user."</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAdded"><con:configuration><token>"added":["egg"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="addAllergies2" id="259d2af0-5345-42be-9f50-d540a7121302"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>inquireAllergies</con:operation><con:request name="addAllergies2" id="c5dd9398-da6f-445f-838a-4a3328f09f7a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:inquireAllergies>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>computer</arr:string>
+            <arr:string>banana</arr:string>
+         </tem:args>
+      </tem:inquireAllergies>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2a61f880-3ed0-46d4-80b3-a79e6fe67eff"/><con:assertion type="Schema Compliance" id="a659cefb-0a3e-480c-930d-fd2c9c43bd40"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsUnknown"><con:configuration><token>"Unknown":["computer"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAdded"><con:configuration><token>"added":["banana"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAllergies"><con:configuration><token>"allergies":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsAlreadyInquired"><con:configuration><token>"already inquired":["egg"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f40df537-3740-4ffe-8914-f0a2f10f6d91" name="ContainsStatus"><con:configuration><token>"status":"Preferences have been added to the user."</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="removeAllergies2" id="c994d8db-70ff-493d-a424-b02d1c74524a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IUserProfil</con:interface><con:operation>removeAllergies</con:operation><con:request name="removeAllergies2" id="44aa9c6f-6e4b-4ac3-a23a-832dd9cd0da2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:removeAllergies>
+         <!--Optional:-->
+         <tem:args>
+            <!--Zero or more repetitions:-->
+            <arr:string>675719</arr:string>
+            <arr:string>egg</arr:string>
+            <arr:string>banana</arr:string>
+            <arr:string>coconut</arr:string>
+            <arr:string>monopoly</arr:string>
+            
+         </tem:args>
+      </tem:removeAllergies>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d589bf20-6572-41f6-ad89-9c95ef78ee51"/><con:assertion type="Schema Compliance" id="025d9474-a032-4f02-b517-c87e806bdec4"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="fa495087-75b3-424f-b88c-0776f1738b4f" name="ContainsUnknown"><con:configuration><token>"Unknown":["monopoly"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="fa495087-75b3-424f-b88c-0776f1738b4f" name="ContainsWasNotInFridge"><con:configuration><token>"Was not in allergies":["coconut"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="fa495087-75b3-424f-b88c-0776f1738b4f" name="ContainsAllergies"><con:configuration><token>"allergies":[</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="fa495087-75b3-424f-b88c-0776f1738b4f" name="ContainsRemoved"><con:configuration><token>"removed":["egg","banana"]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b29ad08b-00b3-4578-998d-4669b29094d2" name="ContainsStatus"><con:configuration><token>"status":"Ingredient ['egg', 'banana', 'coconut', 'monopoly'] have been removed from the user allergies"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

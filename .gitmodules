@@ -1,0 +1,22 @@
+[submodule "Recommendation-System-Q"]
+	path = Recommendation-System-Q
+	url = https://github.com/PNS-PS7-1819/Recommendation-System-Q.git
+[submodule "client-recommendation-web-service-Q"]
+	path = client-recommendation-web-service-Q
+	url = https://github.com/PNS-PS7-1819/client-recommendation-web-service-Q.git
+[submodule "users-profils-Q"]
+	path = users-profils-Q
+	url = https://github.com/PNS-PS7-1819/users-profils-Q.git
+[submodule "CLI-.NET-Q"]
+	path = CLI-.NET-Q
+	url = https://github.com/PNS-PS7-1819/CLI-.NET-Q.git
+[submodule "web-client-Q"]
+	path = web-client-Q
+	url = https://github.com/PNS-PS7-1819/web-client-Q.git
+[submodule "localization"]
+	path = localization
+	url = https://github.com/PNS-PS7-1819/Localization.git
+[submodule "super-markets-service"]
+	path = super-markets-service
+	url = https://github.com/PNS-PS7-1819/super-markets-service.git
+

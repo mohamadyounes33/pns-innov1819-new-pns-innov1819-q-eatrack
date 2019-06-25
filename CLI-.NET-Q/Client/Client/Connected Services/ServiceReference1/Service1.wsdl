@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_addToFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addToFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getRecommendations_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRecommendations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getRecommendations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRecommendationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_evaluateRecipe_InputMessage">
+    <wsdl:part name="parameters" element="tns:evaluateRecipe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_evaluateRecipe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:evaluateRecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inquirePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferences" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inquirePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferences" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inquireAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inquireAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergiesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="addToFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addToFridge" message="tns:IService1_addToFridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addToFridgeResponse" message="tns:IService1_addToFridge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removeFromFridge" message="tns:IService1_removeFromFridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removeFromFridgeResponse" message="tns:IService1_removeFromFridge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecommendations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getRecommendations" message="tns:IService1_getRecommendations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getRecommendationsResponse" message="tns:IService1_getRecommendations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="evaluateRecipe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/evaluateRecipe" message="tns:IService1_evaluateRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/evaluateRecipeResponse" message="tns:IService1_evaluateRecipe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inquirePreferences" message="tns:IService1_inquirePreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inquirePreferencesResponse" message="tns:IService1_inquirePreferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removePreferences" message="tns:IService1_removePreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removePreferencesResponse" message="tns:IService1_removePreferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inquireAllergies" message="tns:IService1_inquireAllergies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inquireAllergiesResponse" message="tns:IService1_inquireAllergies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removeAllergies" message="tns:IService1_removeAllergies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removeAllergiesResponse" message="tns:IService1_removeAllergies_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addToFridge">
+      <soap:operation soapAction="http://tempuri.org/IService1/addToFridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <soap:operation soapAction="http://tempuri.org/IService1/removeFromFridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecommendations">
+      <soap:operation soapAction="http://tempuri.org/IService1/getRecommendations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="evaluateRecipe">
+      <soap:operation soapAction="http://tempuri.org/IService1/evaluateRecipe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <soap:operation soapAction="http://tempuri.org/IService1/inquirePreferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <soap:operation soapAction="http://tempuri.org/IService1/removePreferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <soap:operation soapAction="http://tempuri.org/IService1/inquireAllergies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <soap:operation soapAction="http://tempuri.org/IService1/removeAllergies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/web_service/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

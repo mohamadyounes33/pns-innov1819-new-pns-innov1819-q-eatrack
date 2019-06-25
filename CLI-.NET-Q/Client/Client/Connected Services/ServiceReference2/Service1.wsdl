@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserProfil_addToFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridge" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_addToFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToFridgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeFromFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridge" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeFromFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromFridgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquirePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferences" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquirePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquirePreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removePreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferences" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removePreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removePreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquireAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergies" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_inquireAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inquireAllergiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeAllergies_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergies" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_removeAllergies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeAllergiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_emptyFridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:emptyFridge" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfil_emptyFridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:emptyFridgeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserProfil">
+    <wsdl:operation name="addToFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/addToFridge" message="tns:IUserProfil_addToFridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/addToFridgeResponse" message="tns:IUserProfil_addToFridge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removeFromFridge" message="tns:IUserProfil_removeFromFridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removeFromFridgeResponse" message="tns:IUserProfil_removeFromFridge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/inquirePreferences" message="tns:IUserProfil_inquirePreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/inquirePreferencesResponse" message="tns:IUserProfil_inquirePreferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removePreferences" message="tns:IUserProfil_removePreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removePreferencesResponse" message="tns:IUserProfil_removePreferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/inquireAllergies" message="tns:IUserProfil_inquireAllergies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/inquireAllergiesResponse" message="tns:IUserProfil_inquireAllergies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/removeAllergies" message="tns:IUserProfil_removeAllergies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/removeAllergiesResponse" message="tns:IUserProfil_removeAllergies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="emptyFridge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfil/emptyFridge" message="tns:IUserProfil_emptyFridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfil/emptyFridgeResponse" message="tns:IUserProfil_emptyFridge_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserProfil" type="tns:IUserProfil">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addToFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/addToFridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removeFromFridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquirePreferences">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/inquirePreferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePreferences">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removePreferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inquireAllergies">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/inquireAllergies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAllergies">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/removeAllergies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emptyFridge">
+      <soap:operation soapAction="http://tempuri.org/IUserProfil/emptyFridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IUserProfil" binding="tns:BasicHttpBinding_IUserProfil">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/web_service_users/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
